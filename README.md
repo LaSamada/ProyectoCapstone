@@ -1,4 +1,4 @@
-# ProyectoCapstone
+# Proyecto Capstone G4
 
 Repositorio del Grupo 4.
 
