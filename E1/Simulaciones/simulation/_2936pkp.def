@@ -1,0 +1,10 @@
+SLAVE:
+INPUT: _2936pkp.inm
+MODNAME: apmain
+RUNID: _2936pkp
+NEW_RUNID: _2936pkp
+OLD_RUNID: _2936pkp
+PDF: _2936pkp.appdf
+USERNAME: dnavalos
+XMOD: C:\Program Files (x86)\AspenTech\Aspen Plus V10.0\Engine\xeq\apmain
+DBCONN: _2936pkp.ads
