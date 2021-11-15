@@ -65,10 +65,10 @@ Rg = kxg*Xa*Xg*(S/(S + Kz));
 Re = kxe*Xa*(S/(S + Kz))*(Xg/(Xg + Ke))*(C1/(C1 + K1));
 
 
-mu = ya*Ra - (1 - yz)*(Rz + Rg + Re)
+mu = ya*Ra - (1 - yz)*(Rz + Rg + Re);
 
 
-dXa = ya*Ra - Rz - Rg - Re - mu*Xa
+dXa = ya*Ra - Rz - Rg - Re - mu*Xa;
 dXz = yz*Rz - mu*Xz;
 dXg = yz*Rg - mu*Xg;
 dXe = yz*Rg - mu*Xg;
