@@ -84,7 +84,7 @@ plot(t,Etan,'-m','linewidth',1.5)
 % plot(t,Cris,'-b','linewidth',1.5)
 plot(t,Ac,'-k','linewidth',1.5); hold off
 legend('AHM','EtAc','AAM','Etan','Ac')
-xlabel('t [hr]')
+xlabel('t [min]')
 ylabel('Unidades [mol/L]')
 title('Reactor Químico')
 xlim([0 121])
