@@ -28,7 +28,7 @@ ts  = [0 0];
 Y0    = zeros(1,7);
 Y0(1) = 0.1; % AHM 
 Y0(2) = 0.08;
-Y0(5) = 3.913e-5;
+Y0(5) = 6.2e-4;
 Y0(7) = 1.51/60.05;
 
 function sys=mdlDerivatives(t,y,u)
