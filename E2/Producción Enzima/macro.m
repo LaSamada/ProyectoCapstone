@@ -62,16 +62,32 @@ Fero = out.reac3(:,6);
 Ac   = out.reac3(:,7);
 
 figure(4);
+subplot(2,1,1);
 plot(t,AHM,'-r','linewidth',1.5); grid on; hold on;
 plot(t,EtAc,'-b','linewidth',1.5)
 plot(t,AAM,'-g','linewidth',1.5)
-plot(t,Etan,'-y','linewidth',1.5)
-plot(t,Cris,'-b','linewidth',1.5)
-plot(t,Fero,'-c','linewidth',1.5)
+plot(t,Etan,'-m','linewidth',1.5)
+% plot(t,Cris,'-b','linewidth',1.5)
 plot(t,Ac,'-k','linewidth',1.5); hold off
-legend('AHM','EtAc','AAM','Etan','Cris','Fero','Ac')
+legend('AHM','EtAc','AAM','Etan','Ac')
 xlabel('t [hr]')
 ylabel('Unidades [mol/L]')
 title('Reactor Químico')
 xlim([0 120])
+
+subplot(2,1,2);
+yyaxis left
+plot(t,Fero,'-c','linewidth',1.5);
+grid on;
+ylabel('Feromona [mol/L]')
+ylim([0 5e-7])
+yyaxis right
+plot(t,Cris,'-r','linewidth',1.5);
+ylim([0 4e-5])
+ylabel('Crisantemol [mol/L]')
+xlim([0 120])
+ax = gca;
+ax.YAxis(1).Color = 'k';
+ax.YAxis(2).Color = 'k';
+
 
