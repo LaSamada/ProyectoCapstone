@@ -15,16 +15,23 @@ subplot(2,1,1);
 plot(t,Xa,'-r','linewidth',1.5); grid on; hold on;
 plot(t,Xg,'-b','linewidth',1.5)
 plot(t,Xz,'-g','linewidth',1.5); hold off
+legend('Componentes celulares activos',...
+    'Concentración celular de plasmido', 'Z')
+title('Fermentador')
 xlim([0 25])
 subplot(2,1,2);
 plot(t,Xe,'-c','linewidth',1.5); grid on;
+ylabel('Enzima Recombinante [Unidades]')
+xlabel('t [hr]')
 xlim([0 25])
 
 figure(2);
 plot(t,x,'-r','linewidth',1.5); grid on; hold on;
 plot(t,S,'-b','linewidth',1.5)
 plot(t,Ac,'-g','linewidth',1.5); hold off
+legend('Biomasa', 'Glucosa Extracelular', 'Ácido acético')
 xlim([0 25])
+title('Subproductos a limpiar?')
 
 % Reactor enzimático:
 
@@ -34,6 +41,7 @@ P  = out.reac2(:,2);
 figure(3);
 subplot(2,1,1);
 plot(t,S,'-c','linewidth',1.5); grid on;
+title('Reactor Enzimático')
 xlabel('t [hr]')
 ylabel('Prenol [mol/L]')
 xlim([25 121])
@@ -52,4 +60,18 @@ Etan = out.reac3(:,4);
 Cris = out.reac3(:,5);
 Fero = out.reac3(:,6);
 Ac   = out.reac3(:,7);
+
+figure(4);
+plot(t,AHM,'-r','linewidth',1.5); grid on; hold on;
+plot(t,EtAc,'-b','linewidth',1.5)
+plot(t,AAM,'-g','linewidth',1.5)
+plot(t,Etan,'-y','linewidth',1.5)
+plot(t,Cris,'-b','linewidth',1.5)
+plot(t,Fero,'-c','linewidth',1.5)
+plot(t,Ac,'-k','linewidth',1.5); hold off
+legend('AHM','EtAc','AAM','Etan','Cris','Fero','Ac')
+xlabel('t [hr]')
+ylabel('Unidades [mol/L]')
+title('Reactor Químico')
+xlim([0 120])
 
