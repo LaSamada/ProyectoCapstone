@@ -52,18 +52,18 @@ P  = out.reac2(:,2);
 
 figure(3);
 subplot(2,1,1);
-plot(t-25,S,'-c','linewidth',1.5); grid on;
+plot(t-14,S * 86.132,'-c','linewidth',1.5); grid on;
 title('Reactor Enzimático')
 xlabel('t [hr]')
-ylabel('Prenol [mol/L]')
+ylabel('Prenol [g/L]')
 legend('Prenol')
-xlim([25-25 121-25])
+xlim([25-14 121-14])
 subplot(2,1,2);
-plot(t-25,P,'-b','linewidth',1.5); grid on;
+plot(t-14,P * 154.25,'-b','linewidth',1.5); grid on;
 xlabel('t [hr]')
-ylabel('Crisantemol [mol/L]')
+ylabel('Crisantemol [g/L]')
 legend('Crisantemol')
-xlim([25-25 121-25])
+xlim([25-14 121-14])
 
 % Reactor químico
 
@@ -91,15 +91,16 @@ xlim([0 121])
 
 subplot(2,1,2);
 yyaxis left
-plot(t,Fero,'-c','linewidth',1.5);
+plot(t,Fero * 296.402,'-c','linewidth',1.5);
 grid on;
-ylabel('Feromona [mol/L]')
+ylabel('Feromona [g/L]')
 xlabel('t [min]')
+ylim([0 0.15])
 %ylim([0 5e-7])
 yyaxis right
-plot(t,Cris,'-r','linewidth',1.5);
+plot(t,Cris * 154.25,'-r','linewidth',1.5);
 %ylim([0 4e-5])
-ylabel('Crisantemol [mol/L]')
+ylabel('Crisantemol [g/L]')
 xlabel('t [min]')
 xlim([0 121])
 legend('Feromona','Crisantemol')
