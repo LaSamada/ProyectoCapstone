@@ -54,13 +54,13 @@ figure(3);
 subplot(2,1,1);
 plot(t-25,S,'-c','linewidth',1.5); grid on;
 title('Reactor Enzimático')
-xlabel('t [min]')
+xlabel('t [hr]')
 ylabel('Prenol [mol/L]')
 legend('Prenol')
 xlim([25-25 121-25])
 subplot(2,1,2);
 plot(t-25,P,'-b','linewidth',1.5); grid on;
-xlabel('t [min]')
+xlabel('t [hr]')
 ylabel('Crisantemol [mol/L]')
 legend('Crisantemol')
 xlim([25-25 121-25])
@@ -84,9 +84,9 @@ plot(t,Etan,'-m','linewidth',1.5)
 % plot(t,Cris,'-b','linewidth',1.5)
 plot(t,Ac,'-k','linewidth',1.5); hold off
 legend('AHM','EtAc','AAM','Etan','Ac')
-xlabel('t [hr]')
+xlabel('t [min]')
 ylabel('Unidades [mol/L]')
-title('Reactor Químico')
+title('Reactor Enzimático 2')
 xlim([0 121])
 
 subplot(2,1,2);
